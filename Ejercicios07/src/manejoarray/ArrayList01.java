@@ -7,6 +7,7 @@ package manejoarray;
 
 // import java.util.ArrayList;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class ArrayList01 {
 
     public static void main(String[] args) {
-
+         Scanner entrada = new Scanner(System.in);
         // creación de un ArrayList
         ArrayList<Integer> arreglo = new ArrayList<>();
 
@@ -29,10 +30,10 @@ public class ArrayList01 {
         arreglo.add(2000);
         arreglo.add(3000);
 
-        for (int i = 0; i < arreglo.size(); i++) {
+        /*for (int i = 0; i < arreglo.size(); i++) {
             System.out.println(arreglo.get(i));
         }
-
+        */
         System.out.println("----------------------------------");
 
         ArrayList<Double> arreglo3 = new ArrayList<>();
@@ -42,14 +43,28 @@ public class ArrayList01 {
         arreglo3.add(12.2);
         arreglo3.add(13.2);
 
-        for (int i = 0; i < arreglo3.size(); i++) {
+        /*for (int i = 0; i < arreglo3.size(); i++) {
             System.out.println(arreglo3.get(i));
         }
-
+        */
         System.out.println("----------------------------------");
         ArrayList<String> arreglo2 = new ArrayList<>();
-
-        
+        boolean bandera = true;
+        String pais;
+        String opcion;
+        while(bandera) {
+            System.out.println("Ingrese el nombre de un pais");
+            pais = entrada.nextLine();
+            arreglo2.add(pais);
+            System.out.println("Ingrese s para salir");
+            opcion = entrada.nextLine();
+            if ("s".equals(opcion)) {
+                bandera = false;
+            }
+        }
+        for (int i = 0; i < arreglo2.size(); i++) {
+            System.out.println(arreglo2.get(i));
+        }
         
         /*
         ArrayList <String> arreglo2 = new ArrayList<>();
